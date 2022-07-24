@@ -12,6 +12,9 @@
 		AD689B00288D8F9800FD1BDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD689AFF288D8F9800FD1BDB /* ViewController.swift */; };
 		AD689B05288D8F9900FD1BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD689B04288D8F9900FD1BDB /* Assets.xcassets */; };
 		AD689B08288D8F9900FD1BDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD689B06288D8F9900FD1BDB /* LaunchScreen.storyboard */; };
+		AD689B11288D902300FD1BDB /* Coinpaprika in Frameworks */ = {isa = PBXBuildFile; productRef = AD689B10288D902300FD1BDB /* Coinpaprika */; };
+		AD689B13288D902300FD1BDB /* CoinpaprikaNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = AD689B12288D902300FD1BDB /* CoinpaprikaNetworking */; };
+		AD689B15288D902300FD1BDB /* CoinpaprikaNetworkingMocks in Frameworks */ = {isa = PBXBuildFile; productRef = AD689B14288D902300FD1BDB /* CoinpaprikaNetworkingMocks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD689B13288D902300FD1BDB /* CoinpaprikaNetworking in Frameworks */,
+				AD689B15288D902300FD1BDB /* CoinpaprikaNetworkingMocks in Frameworks */,
+				AD689B11288D902300FD1BDB /* Coinpaprika in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +86,11 @@
 			dependencies = (
 			);
 			name = CoinApp;
+			packageProductDependencies = (
+				AD689B10288D902300FD1BDB /* Coinpaprika */,
+				AD689B12288D902300FD1BDB /* CoinpaprikaNetworking */,
+				AD689B14288D902300FD1BDB /* CoinpaprikaNetworkingMocks */,
+			);
 			productName = CoinApp;
 			productReference = AD689AF8288D8F9800FD1BDB /* CoinApp.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +119,9 @@
 				Base,
 			);
 			mainGroup = AD689AEF288D8F9800FD1BDB;
+			packageReferences = (
+				AD689B0F288D902300FD1BDB /* XCRemoteSwiftPackageReference "coinpaprika-api-swift-client" */,
+			);
 			productRefGroup = AD689AF9288D8F9800FD1BDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +360,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD689B0F288D902300FD1BDB /* XCRemoteSwiftPackageReference "coinpaprika-api-swift-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/coinpaprika/coinpaprika-api-swift-client";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD689B10288D902300FD1BDB /* Coinpaprika */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD689B0F288D902300FD1BDB /* XCRemoteSwiftPackageReference "coinpaprika-api-swift-client" */;
+			productName = Coinpaprika;
+		};
+		AD689B12288D902300FD1BDB /* CoinpaprikaNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD689B0F288D902300FD1BDB /* XCRemoteSwiftPackageReference "coinpaprika-api-swift-client" */;
+			productName = CoinpaprikaNetworking;
+		};
+		AD689B14288D902300FD1BDB /* CoinpaprikaNetworkingMocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD689B0F288D902300FD1BDB /* XCRemoteSwiftPackageReference "coinpaprika-api-swift-client" */;
+			productName = CoinpaprikaNetworkingMocks;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD689AF0288D8F9800FD1BDB /* Project object */;
 }
